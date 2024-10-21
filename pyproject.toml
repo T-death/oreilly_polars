@@ -1,0 +1,28 @@
+[project]
+name = "oreilly-polars"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "T-death", email = "suketawada0612@gmail.com" }
+]
+dependencies = [
+    "polars>=1.10.0",
+    "jupyterlab>=4.2.5",
+    "ipykernel>=6.29.5",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/oreilly_polars"]
