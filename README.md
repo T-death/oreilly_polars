@@ -5,6 +5,14 @@
     * 通常のpolarsでは32ビットで扱うため、データが大きすぎるとバグるみたい
     * かと言って不必要に`polars-u64-idx`を使用すると、かえってパフォーマンスが低下する可能性がある点に注意
 * `with pl.Config() as cfg:`のように操作すると、polarsの設定を特定のスコープ内だけで変更可能
+# 第2章（Moving from Pandas to Polars）
+* pandasとpolarsの共通点
+    * DataFrameがメインのデータ構造
+        * Series型もある
+    * プリミティブ型やdatetimeといったデータ型をサポートしている
+* polarsの命名由来
+    * パンダ < ホッキョクグマという序列だから
+    * Rust製であることにちなんで、Pola`rs`とRustファイルと同じ拡張子になるから
 
 
 # 環境構築
