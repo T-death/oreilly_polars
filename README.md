@@ -32,7 +32,26 @@
         * pandasでも並列処理は可能だが、確か`pandara.lel`というライブラリと組み合わせる必要がある
     * `LazyFrame`は即座に処理を実行するわけではなく、`lf.collect()`によって初めて実行される
         * `LazyFrame`の宣言時は、あくまで計算処理を持ったクエリってだけ
-    * 
+# 第4章（Eager and Lazy APIs）
+* Eager API
+    * 即時実行モデルを使用するため、リアルタイムでデータが操作される
+    * pandasと同じ挙動
+* Lazy API
+    * 遅延実行モデルを使用するため、実行時に最適化を適用することができる
+* 機能の違い
+    * LazyFrameはあくまで遅延実行されるだけで、実行されたらDataFrameに相当する処理が扱える（大事！）
+    * 集計
+        * DataFrameでは列ごとの集計だけでなく、行ごとの集計も実行できるモジュールがある
+        * LazyFrameでは列ごとの集計モジュールしかない
+            * これは、Arrowデータ型によって列で管理する仕組みだからかな？
+    * 属性
+        * LazyFrameには`.shape()`モジュールが備わっていない
+            * データが使用可能になったタイミング（=`collect()`後？）に使えるようになる
+    * 説明性
+        * DataFrameは、`.describe()`や`.is_unique()`といったpandasの機能に相当するモジュールがある
+        * LazyFrameには`.explain()`しかない
+    * DataFrame to LazyFrame -> `.lazy()`
+    * LazyFrame to DataFrame -> `.collect()`
 
 
 # 環境構築
