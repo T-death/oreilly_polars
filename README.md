@@ -1,4 +1,5 @@
 # Python Polars: The Definitive Guide
+引用元：https://github.com/jeroenjanssens/python-polars-the-definitive-guide
 
 # 第1章（Fisrt Step）
 * 通常のpolarsであれば`pip install polars`で良いが、データが大きい場合（=42億行以上が目安らしい）は`pip install polars-u64-idx`をインストールする
@@ -52,6 +53,8 @@
         * LazyFrameには`.explain()`しかない
     * DataFrame to LazyFrame -> `.lazy()`
     * LazyFrame to DataFrame -> `.collect()`
+# 第5章（Reading and Writing Data）
+
 
 
 # 環境構築
