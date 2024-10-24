@@ -56,7 +56,9 @@
 # 第5章（Reading and Writing Data）
 # 第6章（Beginning Expressions）
 * `pl.Expr`には様々なメソッドが用意されていて、`Expr.str / Expr.dt / Expr.cat`のように文字列 / 時間 / カテゴリといった分野の操作が可能
-
+# 第7章（Continuing Expressions）
+* 量が多過ぎるので、一旦スキップ
+    * ページの真ん中らへんの`ローリング統計`の手前までやった
 
 
 # 環境構築
